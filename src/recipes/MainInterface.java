@@ -23,7 +23,8 @@ public class MainInterface extends JPanel {
 	JTextField liquidIngredientTextBox;
 	JTextField liquidQuantityTextBox;
 	JLabel selectRecipeLabel = new JLabel("Select Recipe: ");
-	JComboBox recipeDropDown = new JComboBox();
+	String[] bsRecipes = {"one", "two", "three"};
+	JComboBox recipeDropDown = new JComboBox(bsRecipes);
 	
 	
 	public MainInterface(String title) {
