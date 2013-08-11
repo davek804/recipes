@@ -36,11 +36,7 @@ public class MainInterface extends JPanel {
 			}
         });      
  
-		
-		
-		
-		
-		
+
 		liquidIngredientTextBox = new JTextField("Liquid Ingredient");
 		liquidQuantityTextBox = new JTextField("Liquid Quantity");
 		solidIngredientTextBox = new JTextField("Solid Ingredient");
