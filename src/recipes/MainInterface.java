@@ -8,6 +8,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -22,10 +23,13 @@ public class MainInterface extends JPanel {
 	JTextField liquidIngredientTextBox;
 	JTextField liquidQuantityTextBox;
 	JLabel selectRecipeLabel = new JLabel("Select Recipe: ");
+	JComboBox recipeDropDown = new JComboBox();
+	
 	
 	public MainInterface(String title) {
 		this.title = title;
 		this.add(selectRecipeLabel);
+		this.add(recipeDropDown);
 		//checkBox1 = new JCheckBox(title);
 		//checkBox1.addItemListener(new CheckBoxListener());
 		//this.add(checkBox1);
