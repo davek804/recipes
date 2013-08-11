@@ -29,13 +29,11 @@ public class MainInterface extends JPanel {
 		this.add(checkBox1);
 		
 		button1 = new JButton("Save Recipe");
-        button1.addActionListener(new ActionListener() {
-        	 
-            public void actionPerformed(ActionEvent e)
-            {
-                //Execute when button is pressed
-                System.out.println("You clicked the button");
-            }
+        button1.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				System.out.println("You clicked the button");
+				
+			}
         });      
  
 		
@@ -58,13 +56,8 @@ public class MainInterface extends JPanel {
 	public class CheckBoxListener implements ItemListener  {
 		
 		   public void itemStateChanged(ItemEvent e) {
-	            if(e.getStateChange() == 0){
-	                System.out.println("0 has been selected");
-	                }
-	            if (e.getStateChange() == 1) {
-	            	System.out.println("1");
-	            }
-	        }
+			   System.out.println("Changed");
+		   }
 		
 	}
 }
