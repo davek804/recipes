@@ -23,13 +23,19 @@ public class MainInterface extends JPanel {
 	JLabel selectRecipeLabel = new JLabel("Select Recipe: ");
 	String[] toBeDBisfied = {"one", "two", "three"};
 	JComboBox recipeDropDown = new JComboBox(toBeDBisfied);
+	JButton addRecipeButton = new JButton("+");
 	
 	
 	public MainInterface() {
 		this.add(selectRecipeLabel);
 		recipeDropDown.addActionListener(new RecipeDropDownListener());
 		this.add(recipeDropDown);
-		
+		addRecipeButton.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent e) {
+				System.out.println("Plus Recipe Clicked");
+			}
+		});
+		this.add(addRecipeButton);
 		button1 = new JButton("Save Recipe");
         button1.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
