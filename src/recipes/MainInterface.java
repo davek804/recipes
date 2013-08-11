@@ -53,11 +53,18 @@ public class MainInterface extends JPanel {
 				JButton okay = new JButton("Save");
 				okay.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						//TODO - memory mgmt as well as dB interaction needs
-						//to be implement
-						System.out.println("Closed with a save of: " + newRecipeTextBox.getText());
-						junk.setVisible(false);
-					}
+						if (newRecipeTextBox.getText().length() >= 1){
+							
+							//TODO - memory mgmt as well as dB interaction needs
+							//to be implement
+							System.out.println("Closed with a save of: " + newRecipeTextBox.getText());
+							junk.setVisible(false);
+						}
+						else {
+							return;
+						}
+						}
+					
 				});
 				region.add(cancel);
 				region.add(okay);
