@@ -12,7 +12,7 @@ public class Loader {
 	
 	public static void main (String [] args) {
 		JFrame appFrame = new JFrame();
-		appFrame.setTitle("niggers");
+		appFrame.setTitle("Recipes");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		appFrame.setSize((int)screenSize.getWidth()/2, (int)screenSize.getHeight()/2);
 		appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
