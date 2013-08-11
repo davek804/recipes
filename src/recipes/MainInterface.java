@@ -14,8 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class MainInterface extends JPanel {
-	String title;
-	//JCheckBox checkBox1;
 	JTextField textBox1;
 	JButton button1;
 	JTextField solidIngredientTextBox;
@@ -27,13 +25,10 @@ public class MainInterface extends JPanel {
 	JComboBox recipeDropDown = new JComboBox(toBeDBisfied);
 	
 	
-	public MainInterface(String title) {
-		this.title = title;
+	public MainInterface() {
 		this.add(selectRecipeLabel);
+		recipeDropDown.addActionListener(new RecipeDropDownListener());
 		this.add(recipeDropDown);
-		//checkBox1 = new JCheckBox(title);
-		//checkBox1.addItemListener(new CheckBoxListener());
-		//this.add(checkBox1);
 		
 		button1 = new JButton("Save Recipe");
         button1.addItemListener(new ItemListener() {
@@ -42,20 +37,16 @@ public class MainInterface extends JPanel {
 				
 			}
         });      
- 
 
-		liquidIngredientTextBox = new JTextField("Liquid Ingredient");
-		liquidQuantityTextBox = new JTextField("Liquid Quantity");
-		solidIngredientTextBox = new JTextField("Solid Ingredient");
-		solidQuantityTextBox = new JTextField("Solid Quantity");
-		
-//		this.add(liquidIngredientTextBox);
-//		this.add(liquidQuantityTextBox);
-//		this.add(solidIngredientTextBox);
-//		this.add(solidQuantityTextBox);
 		this.add(button1);
 	}
 	
+	public class RecipeDropDownListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			//will eventually return the name of the recipe and populate the recipe interface
+			System.out.println(e.getSource().toString());
+		}
+	}
 //	public class CheckBoxListener implements ItemListener  {
 //		
 //		   public void itemStateChanged(ItemEvent e) {

@@ -12,13 +12,13 @@ public class Loader {
 	
 	public static void main (String [] args) {
 		JFrame appFrame = new JFrame();
-		appFrame.setTitle("Recipes .1a");
+		appFrame.setTitle("niggers");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		appFrame.setSize((int)screenSize.getWidth()/2, (int)screenSize.getHeight()/2);
 		appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//Show center screen Jpanel
-		mainInterface = new MainInterface("Title 1a");
+		mainInterface = new MainInterface();
 		appFrame.add(mainInterface);
 		
 		appFrame.show();
