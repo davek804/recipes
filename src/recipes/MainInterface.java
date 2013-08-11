@@ -17,6 +17,10 @@ public class MainInterface extends JPanel {
 	JCheckBox checkBox1;
 	JTextField textBox1;
 	JButton button1;
+	JTextField solidIngredientTextBox;
+	JTextField solidQuantityTextBox;
+	JTextField liquidIngredientTextBox;
+	JTextField liquidQuantityTextBox;
 	
 	public MainInterface(String title) {
 		this.title = title;
@@ -24,7 +28,7 @@ public class MainInterface extends JPanel {
 		checkBox1.addItemListener(new CheckBoxListener());
 		this.add(checkBox1);
 		
-		button1 = new JButton("Button 1");
+		button1 = new JButton("Save Recipe");
         button1.addActionListener(new ActionListener() {
         	 
             public void actionPerformed(ActionEvent e)
@@ -36,9 +40,19 @@ public class MainInterface extends JPanel {
  
 		
 		
+		
+		
+		
+		liquidIngredientTextBox = new JTextField("Liquid Ingredient");
+		liquidQuantityTextBox = new JTextField("Liquid Quantity");
+		solidIngredientTextBox = new JTextField("Solid Ingredient");
+		solidQuantityTextBox = new JTextField("Solid Quantity");
+		
+		this.add(liquidIngredientTextBox);
+		this.add(liquidQuantityTextBox);
+		this.add(solidIngredientTextBox);
+		this.add(solidQuantityTextBox);
 		this.add(button1);
-		
-		
 	}
 	
 	public class CheckBoxListener implements ItemListener  {
